@@ -10,6 +10,8 @@ export default {
     './resources/views/**/*.blade.php',
     './resources/js/**/*.tsx',
     './Modules/CarStickers/resources/assets/js/**/*.{js,jsx,ts,tsx}',
+    './Modules/IncidentManagement/resources/assets/js/**/*.{js,jsx,ts,tsx}',
+
   ],
   theme: {
     container: {

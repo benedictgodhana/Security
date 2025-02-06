@@ -30,7 +30,8 @@ import {
   import { useState } from "react"
   import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
   import { Inertia } from '@inertiajs/inertia';
-
+  import { useForm } from "@inertiajs/react";
+import { Button } from "@/components/ui/button";
   export function DashboardSidebar() {
     const [openModule, setOpenModule] = useState<string | null>(null)
 
@@ -38,10 +39,13 @@ import {
       setOpenModule(openModule === moduleName ? null : moduleName)
     }
 
+    const { post } = useForm();
+
     const handleLogout = () => {
-      // This will send a POST request to the logout route
-      Inertia.post(route('logout'))
-    }
+      post(route("logout"));
+    };
+
+
 
     return (
       <Sidebar className="bg-[#0A1F44] text-gray-100">
@@ -223,14 +227,13 @@ import {
         </SidebarContent>
 
         <SidebarFooter className="bg-[#0A1F44] border-t border-[#F97316] p-4">
-        <SidebarNavItem
-  as="button"
+        <Button
   onClick={handleLogout}
-  className="bg-red-600 text-white hover:bg-red-700 hover:text-white transition-colors duration-200 flex items-center mx-3 px-4 py-3 rounded-md"
+  className="w-full bg-red-600 text-white hover:bg-red-700 transition-colors duration-200 flex items-center px-4 py-3 rounded-md"
 >
   <LogOut className="h-4 w-4 mr-3" />
   Logout
-</SidebarNavItem>
+</Button>
 
         </SidebarFooter>
       </Sidebar>

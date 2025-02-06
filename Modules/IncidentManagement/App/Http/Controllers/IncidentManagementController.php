@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Inertia\Inertia;
 
 class IncidentManagementController extends Controller
 {
@@ -14,7 +15,9 @@ class IncidentManagementController extends Controller
      */
     public function index()
     {
-        return view('incidentmanagement::index');
+        return Inertia::render('Home', [
+            'message' => 'Welcome to the Incident Management Module with shadcn/ui!',
+        ]);
     }
 
     /**

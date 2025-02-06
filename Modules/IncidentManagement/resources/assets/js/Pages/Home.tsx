@@ -9,10 +9,10 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = ({ message }) => {
   return (
     <div className="p-4">
-      <Head title="Car Stickers Home" />
+      <Head title="IncidentManagement" />
       <h1 className="text-2xl font-bold mb-4">{message}</h1>
       {/* Use a shadcn/ui component */}
-      <Button variant="primary" onClick={() => alert('Hello from shadcn/ui!')}>
+      <Button variant="primary" onClick={() => alert('Hello from IncidentManagement!')}>
         Click Me
       </Button>
     </div>
