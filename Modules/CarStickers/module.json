@@ -1,0 +1,11 @@
+{
+    "name": "CarStickers",
+    "alias": "carstickers",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\CarStickers\\App\\Providers\\CarStickersServiceProvider"
+    ],
+    "files": []
+}

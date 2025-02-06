@@ -9,6 +9,7 @@ export default {
     './storage/framework/views/*.php',
     './resources/views/**/*.blade.php',
     './resources/js/**/*.tsx',
+    './Modules/CarStickers/resources/assets/js/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
     container: {

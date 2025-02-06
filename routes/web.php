@@ -18,6 +18,12 @@ use Inertia\Inertia;
 |
 */
 
+
+
+foreach (glob(base_path('Modules/*/routes/web.php')) as $moduleRoute) {
+    require $moduleRoute;
+}
+
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
