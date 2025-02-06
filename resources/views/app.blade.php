@@ -15,8 +15,24 @@
         @viteReactRefresh
         @vite(['resources/js/app.tsx', "resources/js/Pages/{$page['component']}.tsx"])
         @inertiaHead
+
+        <style>
+              @font-face {
+            font-family: 'Futura LT';
+            src: url('/fonts/futura-lt/FuturaLT-Book.ttf') format('woff2'),
+                 url('/fonts/futura-lt/FuturaLT.ttf') format('woff'),
+                 url('/fonts/futura-lt/FuturaLT-Condensed.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            margin: 0;
+            font-family: 'Futura LT', sans-serif;
+        }
+        </style>
     </head>
-    <body class="font-sans antialiased">
-        @inertia
-    </body>
+    <body class="font-futura bg-background text-foreground antialiased dark:bg-background dark:text-foreground">
+    @inertia
+</body>
+
 </html>

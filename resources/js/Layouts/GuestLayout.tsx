@@ -1,6 +1,7 @@
 import ApplicationLogo from '@/Components/ApplicationLogo';
 import { Link } from '@inertiajs/react';
 import { PropsWithChildren } from 'react';
+import { Toaster } from "@/components/ui/toaster";
 
 export default function Guest({ children }: PropsWithChildren) {
     return (
@@ -14,6 +15,9 @@ export default function Guest({ children }: PropsWithChildren) {
             <div className="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
                 {children}
             </div>
+
+            {/* Add Toaster to enable toast notifications */}
+            <Toaster />
         </div>
     );
 }
